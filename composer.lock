@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b209304cdec6741041fe0fdd2b427660",
+    "content-hash": "bc4b2ec1962aa210a070fcafbeb1cd7d",
     "packages": [
         {
             "name": "brick/math",
@@ -1051,6 +1051,87 @@
                 }
             ],
             "time": "2025-08-22T14:27:06+00:00"
+        },
+        {
+            "name": "ihxnnxs/umbra-ui",
+            "version": "V0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umbrahq/ui.git",
+                "reference": "83a780817c8b89ed4bc201f8157a1c5a83af7eae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umbrahq/ui/zipball/83a780817c8b89ed4bc201f8157a1c5a83af7eae",
+                "reference": "83a780817c8b89ed4bc201f8157a1c5a83af7eae",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^11.0||^12.0",
+                "php": "^8.3||^8.4",
+                "spatie/laravel-package-tools": "^1.16"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/boost": "^1.1",
+                "laravel/pint": "^1.14",
+                "orchestra/testbench": "*",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-arch": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Toast": "Ihxnnxs\\UmbraUI\\Facades\\Toast",
+                        "UmbraUI": "Ihxnnxs\\UmbraUI\\Facades\\UmbraUI"
+                    },
+                    "providers": [
+                        "Ihxnnxs\\UmbraUI\\UmbraUIServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Ihxnnxs\\UmbraUI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ihxnnxs",
+                    "email": "jan555666@yandex.ru",
+                    "role": "Owner"
+                }
+            ],
+            "description": "Modern UI components library for Laravel applications",
+            "homepage": "https://github.com/ihxnnxs/UmbraUI",
+            "keywords": [
+                "UmbraUI",
+                "laravel",
+                "ui-components",
+                "umbra-ui"
+            ],
+            "support": {
+                "issues": "https://github.com/ihxnnxs/UmbraUI/issues",
+                "source": "https://github.com/ihxnnxs/UmbraUI"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ihxnnxs",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-01-03T19:21:33+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3289,6 +3370,67 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.2"
             },
             "time": "2025-12-14T04:43:48+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.92.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "f09a799850b1ed765103a4f0b4355006360c49a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/f09a799850b1ed765103a4f0b4355006360c49a5",
+                "reference": "f09a799850b1ed765103a4f0b4355006360c49a5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0|^9.0|^10.0",
+                "pestphp/pest": "^1.23|^2.1|^3.1",
+                "phpunit/php-code-coverage": "^9.0|^10.0|^11.0",
+                "phpunit/phpunit": "^9.5.24|^10.5|^11.5",
+                "spatie/pest-plugin-test-time": "^1.1|^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.92.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-07-17T15:46:43+00:00"
         },
         {
             "name": "symfony/clock",
@@ -8562,12 +8704,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }

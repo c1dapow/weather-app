@@ -9,3 +9,304 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.flex {
+    align-items: flex-start;
+    background-color: #e2e2e2;
+}
+
+main {
+    justify-content: center;
+    display: flex;
+    width: 900px;
+    height: 900px;
+    padding: 20px 15px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin-right: 70px;
+}
+
+.alert {
+    background-color: red;
+    position: absolute;
+    top: 42px;
+    border-radius: 20px;
+
+}
+
+main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input_weather-container {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 280px;
+    height: 50px;
+    padding: 10px 20px;
+    align-self: center;
+    display: flex;
+    column-gap: 12px;
+}
+
+main .input_weather-container input {
+    width: 100px;
+}
+
+main .input_weather-container p {
+    font-size: 30px;
+    line-height: 1;
+}
+
+main .input-field input {
+    text-align: center;
+}
+
+main .input-field input:focus {
+    outline: none;
+}
+
+main .input-field .input-data {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 280px;
+    height: 50px;
+    padding: 10px 20px;
+    align-self: center;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    text-align: center;
+    font-size: 20px;
+}
+
+.input-field_radios {
+    justify-content: center;
+    display: flex;
+}
+
+.input-field_radios input {
+    display: none;
+}
+
+.input-field_radios label {
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s;
+    font-size: 20px;
+}
+
+.input-field_radios input:checked + label {
+    color: red;
+}
+
+.input-field_weather input {
+    display: none;
+}
+
+.input-field_weather label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+}
+
+.input-field_weather input:checked + label {
+}
+
+.btn-submit {
+    display: block;
+    margin: 45px auto;
+    width: 280px;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover  {
+    color: white;
+    background-color: #0093ff;
+}
+
+.widgets {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.widget {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 328px;
+    height: 266px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.widget h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.widget .main-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.widget div {
+    display: flex;
+    justify-content: center;
+}
+
+.widget div p {
+    margin-right: 80px;
+    font-size: 30px;
+}
+
+.btn-submit-date {
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 140px;
+    padding: 10px;
+    font-size: 20px;
+    transition: all .3s;
+    display: block;
+    margin-top: 20px;
+}
+
+
+.widget-date {
+    gap: 10px;
+}
+
+.widget-date form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selected-weather {
+    background-color: white;
+    border-radius: 20px;
+    width: 1300px;
+    padding: 20px 15px;
+    margin: auto;
+}
+
+.selected-weather table {
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.selected-weather table img {
+    margin: auto;
+}
+
+.red-text {
+    color: red;
+}
+
+.notifications {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.notifications li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.notifications li:last-child {
+    border-bottom: none;
+}
+
+.notifications li:hover {
+    background: #f8f9fa;
+}
+
+.notifications li.unread {
+    background: #f0f7ff;
+    font-weight: 500;
+}
+
+.notifications li.unread::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #007bff;
+}
+
+
+/* Индикатор типа */
+.notifications li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: transparent;
+}
+
+.notifications li.success::before { background: #28a745; }
+.notifications li.error::before { background: #dc3545; }
+.notifications li.warning::before { background: #ffc107; }
+.notifications li.info::before { background: #17a2b8; }
+
+.notifications-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+@media(max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .input-field_weather img {
+        width: 40px;
+    }
+
+    .widget {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
